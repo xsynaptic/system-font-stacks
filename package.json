@@ -1,0 +1,29 @@
+{
+  "name": "system-font-stacks",
+  "version": "0.0.1",
+  "description": "An opinionated micro-library of system and web-safe font stacks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xsynaptic/system-font-stacks.git"
+  },
+  "keywords": [
+    "fonts",
+    "font",
+    "stacks",
+    "websafe",
+    "fonts",
+    "system",
+    "fonts",
+    "typography"
+  ],
+  "author": "Alexander Synaptic <alexander@synapticism.com> (http://synapticism.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xsynaptic/system-font-stacks/issues"
+  },
+  "homepage": "https://github.com/xsynaptic/system-font-stacks#readme"
+}
