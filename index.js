@@ -1,6 +1,6 @@
 // ==== SYSTEM FONT STACKS ==== //
 
-// These font stacks have been cobbled together from various sources over the years and include a few of my own experiments, particularly with Chinese
+// These system/web-safe font stacks have been cobbled together from various sources over the years and include a few of my own experiments, particularly with Chinese
 module.exports = {
   baskerville: [
     'Baskerville', 'Baskerville Old Face', 'Utopia', 'Hoefler Text', 'Times New Roman', 'DejaVu Serif', 'Liberation Serif', 'Tinos', 'serif',
@@ -140,7 +140,7 @@ module.exports = {
   zhSongtiTc: [
     'LiSong Pro', 'Apple LiSung', '新細明體', 'PMingLiU', 'MingLiU', 'AR PL Mingti2L', 'TW-Sung', 'serif',
   ],
-  zhHeitiSc: [ // Heiti: similar to sans-serif; think Helvetica/'Arial'
+  zhHeitiSc: [ // Heiti: similar to sans-serif; think Helvetica/Arial
     'Heiti SC', 'Microsoft YaHei New', 'Microsoft Yahei', '微软雅黑', 'SimHei', '黑体', 'STHeiti Light', 'STXihei', '华文细黑', 'STHeiti', '华文黑体', 'WenQuanYi Zen Hei', 'sans-serif',
   ],
   zhHeitiTc: [
