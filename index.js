@@ -1,7 +1,6 @@
 // ==== SYSTEM FONT STACKS ==== //
 
-// These system/web-safe font stacks have been cobbled together from various sources over the years and include a few of my own experiments, particularly with Chinese
-module.exports = {
+const serif = {
   baskerville: [
     'Baskerville', 'Baskerville Old Face', 'Utopia', 'Hoefler Text', 'Times New Roman', 'DejaVu Serif', 'Liberation Serif', 'Tinos', 'serif',
   ],
@@ -47,6 +46,9 @@ module.exports = {
   times: [
     'Times New Roman', 'TimesNewRoman', 'DejaVu Serif', 'Liberation Serif', 'Tinos', 'Times', 'serif',
   ],
+};
+
+const sansSerif = {
   arial: [
     'Arial', 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', 'Liberation Sans', 'Arimo', 'sans-serif',
   ],
@@ -92,7 +94,10 @@ module.exports = {
   segoe: [
     'Segoe', 'Segoe UI', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', 'Verdana', 'Geneva', 'sans-serif',
   ],
-  systemSans: [
+  systemGithub: [ // Current as of 2018
+    '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif',
+  ],
+  systemWordPress: [ // https://make.wordpress.org/core/2016/07/07/native-fonts-in-4-6/
     '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', 'sans-serif',
   ],
   tahoma: [
@@ -107,15 +112,9 @@ module.exports = {
   ubuntu: [
     'Ubuntu', 'Myriad Web', 'Myriad Pro', 'Myriad', 'Gill Sans', 'Gill Sans MT', 'DejaVu Sans', 'Verdana', 'Geneva', 'sans-serif',
   ],
-  comicSans: [ // http://www.mcdruid.co.uk/content/cursive-font-stack :]
-    'Comic Neue', 'Comic Sans MS', 'Comic Sans', 'Chalkboard', 'ChalkboardSE-Regular', 'Marker Felt', 'Purisa', 'URW Chancery L', 'cursive',
-  ],
-  impact: [
-    'Impact', 'Haettenschweiler', 'Franklin Gothic Bold', 'Charcoal', 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', 'sans-serif',
-  ],
-  papyrus: [ // Please don't kill me :D
-    'Papyrus', 'ITC Papyrus', 'fantasy',
-  ],
+};
+
+const monospace = {
   andale: [
     'Andale Mono WT', 'Andale Mono', 'Menlo', 'Lucida Console', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'monospace',
   ],
@@ -128,12 +127,33 @@ module.exports = {
   menlo: [
     'Menlo', 'Consolas', 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'monospace',
   ],
+  sfMono: [
+    'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', 'Courier', 'monospace',
+  ],
   typewriter: [
     'Lucida Sans Typewriter', 'Lucida Typewriter', 'Courier New', 'Courier', 'Courier 10 Pitch', 'Liberation Mono', 'Nimbus Mono L', 'Cousine', 'monospace',
   ],
   ubuntuMono: [
     'Ubuntu Mono', 'Monaco', 'Consolas', 'Lucida Console', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'monospace',
   ],
+};
+
+const decorative = {
+  comicSans: [ // http://www.mcdruid.co.uk/content/cursive-font-stack :]
+    'Comic Neue', 'Comic Sans MS', 'Comic Sans', 'Chalkboard', 'ChalkboardSE-Regular', 'Marker Felt', 'Purisa', 'URW Chancery L', 'cursive',
+  ],
+  emoji: [
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  ],
+  impact: [
+    'Impact', 'Haettenschweiler', 'Franklin Gothic Bold', 'Charcoal', 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', 'sans-serif',
+  ],
+  papyrus: [
+    'Papyrus', 'ITC Papyrus', 'fantasy',
+  ],
+};
+
+const chinese = {
   zhSongtiSc: [ // Songti: similar to serif; think Times New Roman
     'Songti SC', 'STSong', '华文宋体', '宋体', 'SimSun', '新宋体', 'NSimSun', 'AR PL New Sung', 'AR PL SungtiL GB', 'serif',
   ],
@@ -156,3 +176,5 @@ module.exports = {
     'FangSong', 'Fang Song', '仿宋', 'STFangSong', '华文仿宋', 'serif',
   ],
 };
+
+module.exports = Object.assign({}, serif, sansSerif, monospace, decorative, chinese);
